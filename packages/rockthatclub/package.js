@@ -8,8 +8,6 @@ Package.describe({
 Package.onUse(function(api) {
   api.use([
     'vulcan:core',
-    'vulcan:base-components',
-    'vulcan:base-styles',
     'vulcan:forms',
     'vulcan:accounts',
   ])

@@ -1,8 +1,8 @@
 # see http://docs.vulcanjs.org/packages
 
 vulcan:core
-vulcan:base-components
-vulcan:base-styles
+# vulcan:base-components
+# vulcan:base-styles
 vulcan:forms
 vulcan:accounts
 
