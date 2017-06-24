@@ -3,10 +3,13 @@ import { withCurrentUser, withList } from 'meteor/vulcan:core'
 import Artists from '../modules/artists/collection'
 
 const ArtistsList = ({
-  currentUser
+  currentUser,
+  results = [],
+  loading,
 }) => (
   <div>
     Hello {currentUser ? currentUser.displayName : 'guest'}!
+    {results.map(artist => artist.name)}
   </div>
 )
 
@@ -16,4 +19,4 @@ const options = {
   limit: 5,
 }
 
-export default withList(options)(withCurrentUser(ArtistsList))
+export default withCurrentUser(ArtistsList)
