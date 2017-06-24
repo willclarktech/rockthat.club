@@ -1,5 +1,6 @@
 import React from 'react'
-import { withCurrentUser } from 'meteor/vulcan:core'
+import { withCurrentUser, withList } from 'meteor/vulcan:core'
+import Artists from '../modules/artists/collection'
 
 const ArtistsList = ({
   currentUser
@@ -9,4 +10,10 @@ const ArtistsList = ({
   </div>
 )
 
-export default withCurrentUser(ArtistsList)
+const options = {
+  collection: Artists,
+  fragmentName: 'ArtistsItemFragment',
+  limit: 5,
+}
+
+export default withList(options)(withCurrentUser(ArtistsList))
