@@ -1,3 +1,3 @@
 import '../components'
-import './artists/collection'
+// import './artists/collection'
 import './routes'
