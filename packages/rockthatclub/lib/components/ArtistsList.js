@@ -1,9 +1,12 @@
 import React from 'react'
+import { withCurrentUser } from 'meteor/vulcan:core'
 
-const ArtistsList = () => (
+const ArtistsList = ({
+  currentUser
+}) => (
   <div>
-    ArtistsList
+    Hello {currentUser ? currentUser.displayName : 'guest'}!
   </div>
 )
 
-export default ArtistsList
+export default withCurrentUser(ArtistsList)
