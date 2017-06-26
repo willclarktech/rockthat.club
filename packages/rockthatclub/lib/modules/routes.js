@@ -1,8 +1,8 @@
 import { addRoute } from 'meteor/vulcan:core'
-import { ArtistsList } from '../components'
+import { PostsList } from '../components'
 
 addRoute({
-  name: 'artists',
+  name: 'posts',
   path: '/',
-  component: ArtistsList,
+  component: PostsList,
 })
