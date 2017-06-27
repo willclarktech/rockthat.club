@@ -1,40 +1,47 @@
 import { newMutation } from 'meteor/vulcan:core'
 import Users from 'meteor/vulcan:users'
-import Artists from '../modules/artists/collection'
+import Posts from '../modules/posts/collection'
 
 const seedData = [
   {
-    name: 'Led Zeppelin',
+    title: 'Led Zeppelin',
+    url: 'http://www.ledzeppelin.com/',
   },
   {
-    name: 'Dolly Parton',
+    title: 'Dolly Parton',
+    url: 'https://dollyparton.com/',
   },
   {
-    name: 'Flying Lotus',
+    title: 'Flying Lotus',
+    url: 'http://www.flying-lotus.com/',
   },
 ]
 
 Meteor.startup(function() {
-  const user = {
-    username: 'admin',
-    email: 'admin@rockthat.club',
-    password: 'password',
+  console.info('// Creating dummy posts')
+  const demoUser = {
+    username: 'DemoUser',
+    email: 'demo@user.com',
+    profile: {
+      isDummy: true,
+    },
   }
   if (!Users.find().fetch().length) {
     newMutation({
       collection: Users,
-      document: user,
+      document: demoUser,
       validate: false,
     })
   }
   const currentUser = Users.findOne()
-  if (!Artists.find().fetch().length) {
-    seedData.forEach(artist => newMutation({
-      action: 'artists.new',
-      collection: Artists,
-      document: artist,
+  if (!Posts.find().fetch().length) {
+    seedData.forEach(post => newMutation({
+      action: 'posts.new',
+      collection: Posts,
+      document: post,
       currentUser,
       validate: false,
     }))
   }
+  console.log(Posts.find().fetch())
 })
