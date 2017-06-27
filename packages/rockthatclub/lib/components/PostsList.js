@@ -9,7 +9,7 @@ const PostsList = ({
 }) => (
   <div>
     Hello {currentUser ? currentUser.displayName : 'guest'}!
-    {results.map(post => post.name)}
+    {results.map(post => post.title)}
   </div>
 )
 
