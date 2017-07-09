@@ -5,15 +5,15 @@ import Posts from '../modules/posts/collection'
 const seedData = [
   {
     title: 'Led Zeppelin',
-    url: 'http://www.ledzeppelin.com/',
+    // url: 'http://www.ledzeppelin.com/',
   },
   {
     title: 'Dolly Parton',
-    url: 'https://dollyparton.com/',
+    // url: 'https://dollyparton.com/',
   },
   {
     title: 'Flying Lotus',
-    url: 'http://www.flying-lotus.com/',
+    // url: 'http://www.flying-lotus.com/',
   },
 ]
 
@@ -43,5 +43,4 @@ Meteor.startup(function() {
       validate: false,
     }))
   }
-  console.log(Posts.find().fetch())
 })
