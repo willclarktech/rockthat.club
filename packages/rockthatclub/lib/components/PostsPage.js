@@ -4,6 +4,18 @@ import { FormattedMessage } from 'meteor/vulcan:i18n';
 import Posts from '../modules/posts/collection'
 import Soundcloud from './Soundcloud'
 
+const CanBring = ({ number }) => (
+  <div>
+    Can bring: {number} people
+  </div>
+)
+
+const MinimumCharge = ({ value }) => (
+  <div>
+    Minimum charge: €{value}
+  </div>
+)
+
 class PostsPage extends getRawComponent('PostsItem') {
   render() {
     if (this.props.loading) {
@@ -15,6 +27,11 @@ class PostsPage extends getRawComponent('PostsItem') {
 
     } else {
       const post = this.props.document;
+      const {
+        canBring,
+        minimumCharge,
+        soundcloud,
+      } = post
 
       const htmlBody = {__html: post.htmlBody};
 
@@ -23,9 +40,9 @@ class PostsPage extends getRawComponent('PostsItem') {
           <Components.HeadTags url={Posts.getPageUrl(post, true)} title={post.title} image={post.thumbnailUrl} description={post.excerpt} />
 
           <Components.PostsItem post={post} currentUser={this.props.currentUser} />
-          { post.soundcloud && (
-            <Soundcloud soundcloudId={post.soundcloud} />
-          )}
+          { soundcloud && (<Soundcloud soundcloudId={soundcloud} />)}
+          { canBring && (<CanBring number={canBring} />)}
+          { minimumCharge && (<MinimumCharge value={minimumCharge} />)}
           {post.htmlBody ? <div className="posts-page-body" dangerouslySetInnerHTML={htmlBody}></div> : null}
 
           <Components.PostsCommentsThread terms={{postId: post._id, view: 'postComments'}} />
