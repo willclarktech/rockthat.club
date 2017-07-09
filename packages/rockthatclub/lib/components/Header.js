@@ -24,9 +24,11 @@ const Header = ({
           {!!currentUser ? <Components.UsersMenu /> : <Components.UsersAccountMenu />}
         </div>
 
-        {/* <div className="nav-new-post">
-          <Components.PostsNewButton/>
-        </div> */}
+        {currentUser.isAdmin && (
+          <div className="nav-new-post">
+            <Components.PostsNewButton/>
+          </div>
+        )}
 
       </div>
 
