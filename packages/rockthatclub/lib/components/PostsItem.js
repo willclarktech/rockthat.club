@@ -35,7 +35,6 @@ class PostsItem extends getRawComponent('PostsItem') {
            </h3>
 
            <div className="posts-item-meta">
-             {post.user? <div className="posts-item-user"><Components.UsersAvatar user={post.user} size="small"/><Components.UsersName user={post.user}/></div> : null}
              <div className="posts-item-date">{post.postedAt ? moment(new Date(post.postedAt)).fromNow() : <FormattedMessage id="posts.dateNotDefined"/>}</div>
              <div className="posts-item-comments">
                <Link to={Posts.getPageUrl(post)}>
