@@ -38,7 +38,13 @@
       "args": "none",
       "varsIgnorePattern": "React|PropTypes|Component"
     }],
-    "no-console": 1,
+    "no-console": [2, {
+      "allow": [
+        "info",
+        "warn",
+        "error"
+      ]
+    }],
     "react/prop-types": 0,
     "meteor/audit-argument-checks": 0,
     "no-case-declarations": 0
