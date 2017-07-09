@@ -8,10 +8,11 @@ Package.describe({
 Package.onUse(function(api) {
   api.use([
     'vulcan:core',
+    'vulcan:accounts',
     'vulcan:base-components',
     'vulcan:base-styles',
+    'vulcan:embedly',
     'vulcan:forms',
-    'vulcan:accounts',
   ])
 
   api.mainModule('lib/server/main.js', 'server')

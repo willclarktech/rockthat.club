@@ -1,10 +1,12 @@
 # see http://docs.vulcanjs.org/packages
 
 vulcan:core
+
+vulcan:accounts
 vulcan:base-components
 vulcan:base-styles
+vulcan:embedly
 vulcan:forms
-vulcan:accounts
 
 ############ Language Packages ############
 
