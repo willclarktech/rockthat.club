@@ -1,5 +1,5 @@
 import React from 'react'
-import { withCurrentUser, withList } from 'meteor/vulcan:core'
+import { Components, withCurrentUser, withList } from 'meteor/vulcan:core'
 import Posts from '../modules/posts/collection'
 
 const PostsList = ({
@@ -8,8 +8,15 @@ const PostsList = ({
   loading,
 }) => (
   <div>
-    Hello {currentUser ? currentUser.displayName : 'guest'}!
-    {results.map(post => post.title)}
+    <Components.PostsListHeader />
+    <div className="posts-list-content">
+      {results.map(post => (
+        <Components.PostsItem
+          key={post._id}
+          post={post}
+        />
+      ))}
+    </div>
   </div>
 )
 
