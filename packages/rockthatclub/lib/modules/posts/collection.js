@@ -2,17 +2,40 @@ import Posts from 'meteor/vulcan:posts'
 import './fragments'
 import './i18n/en_US'
 
-Posts.addField(
-  {
-    fieldName: 'soundcloud',
-    fieldSchema: {
-      type: String,
-      control: 'text', // use a select form control
-      optional: true, // this field is not required
-      insertableBy: ['admins'],
-      editableBy: ['admins'],
-      viewableBy: ['admins'],
-    }
-  })
+Posts.addField({
+  fieldName: 'soundcloud',
+  fieldSchema: {
+    type: String,
+    control: 'text',
+    optional: true,
+    insertableBy: ['admins'],
+    editableBy: ['admins'],
+    viewableBy: ['admins'],
+  },
+})
+
+Posts.addField({
+  fieldName: 'canBring',
+  fieldSchema: {
+    type: Number,
+    control: 'number',
+    optional: true,
+    insertableBy: ['admins'],
+    editableBy: ['admins'],
+    viewableBy: ['admins'],
+  },
+})
+
+Posts.addField({
+  fieldName: 'minimumCharge',
+  fieldSchema: {
+    type: Number,
+    control: 'number',
+    optional: true,
+    insertableBy: ['admins'],
+    editableBy: ['admins'],
+    viewableBy: ['admins'],
+  },
+})
 
 export default Posts
