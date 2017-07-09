@@ -54,9 +54,3 @@ registerFragment(`
     score
   }
 `);
-
-registerFragment(`
-  fragment PostsPage on Post {
-    ...PostsListCustom
-  }
-`);

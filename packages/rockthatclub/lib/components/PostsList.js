@@ -74,7 +74,7 @@ PostsList.contextTypes = {
 const options = {
   collection: Posts,
   queryName: 'postsListQuery',
-  fragmentName: 'PostsListCustom',
+  fragmentName: 'PostsList',
 };
 
 export default withList(options)(withCurrentUser(PostsList))
