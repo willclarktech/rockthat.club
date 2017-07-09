@@ -24,7 +24,7 @@ const Layout = ({
 
     </div>
 
-    <Components.Footer />
+    {currentUser && (<Components.Footer />)}
 
   </div>
 )
