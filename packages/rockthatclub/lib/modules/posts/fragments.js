@@ -44,6 +44,8 @@ registerFragment(`
     score
 
     # custom
+    canBring
+    minimumCharge
     soundcloud
   }
 `);
