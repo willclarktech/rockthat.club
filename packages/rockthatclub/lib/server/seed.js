@@ -1,4 +1,5 @@
 import { newMutation } from 'meteor/vulcan:core'
+import Categories from 'meteor/vulcan:categories'
 import Users from 'meteor/vulcan:users'
 import Posts from '../modules/posts/collection'
 
@@ -20,6 +21,12 @@ const seedData = [
   },
 ]
 
+const categoryNames = {
+  'Led Zeppelin': 'Rock',
+  'Dolly Parton': 'Acoustic',
+  'Flying Lotus': 'Electronic',
+}
+
 Meteor.startup(function() {
   if (!Users.find().fetch().length) {
     console.info('// Creating demo user')
@@ -40,7 +47,12 @@ Meteor.startup(function() {
     seedData.forEach(post => newMutation({
       action: 'posts.new',
       collection: Posts,
-      document: post,
+      document: {
+        ...post,
+        categories: [
+          Categories.findOne({ name: categoryNames[post.title] })._id,
+        ],
+      },
       currentUser,
       validate: false,
     }))
