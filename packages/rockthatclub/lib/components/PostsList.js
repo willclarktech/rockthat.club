@@ -9,7 +9,6 @@ import Posts from '../modules/posts/collection';
 const Error = ({error}) => <Alert className="flash-message" bsStyle="danger"><FormattedMessage id={error.id} values={{value: error.value}}/>{error.message}</Alert>
 
 const PostsList = ({className, results, loading, count, totalCount, loadMore, showHeader = true, showLoadMore = true, networkStatus, currentUser, error, terms}) => {
-
   const loadingMore = networkStatus === 2;
 
   if (results && results.length) {
@@ -77,4 +76,4 @@ const options = {
   fragmentName: 'PostsList',
 };
 
-export default withList(options)(withCurrentUser(PostsList))
+replaceComponent('PostsList', PostsList, withCurrentUser, [withList, options])
