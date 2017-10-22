@@ -7,3 +7,7 @@ import { addStrings } from 'meteor/vulcan:core';
 addStrings('en', {
 	"posts.color": "Color" // add a new one (collection.field: "Label")
 });
+
+addStrings('en', {
+  'posts.new_post': 'Add artist page'
+});
