@@ -12,7 +12,7 @@ Package.onUse( function(api) {
 		'fourseven:scss@4.5.0',
 	]);
 
-	api.mainModule('server.js', 'server');
+	api.mainModule('lib/server/index.js', 'server');
 	api.mainModule('client.js', 'client');
 
 	api.addFiles([
