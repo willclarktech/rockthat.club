@@ -43,10 +43,10 @@ class CustomPostsItem extends getRawComponent('PostsItem') {
 						<div className="posts-item-date">{post.postedAt ? moment(new Date(post.postedAt)).fromNow() : <FormattedMessage id="posts.dateNotDefined"/>}</div>
 						<div className="posts-item-comments">
 							<Link to={Posts.getPageUrl(post)}>
-								{!post.commentCount || post.commentCount === 0 ? <FormattedMessage id="comments.count_0"/> : 
+								{!post.commentCount || post.commentCount === 0 ? <FormattedMessage id="comments.count_0"/> :
 									post.commentCount === 1 ? <FormattedMessage id="comments.count_1" /> :
 										<FormattedMessage id="comments.count_2" values={{count: post.commentCount}}/>
-								}							
+								}
 							</Link>
 						</div>
 						{this.props.currentUser && this.props.currentUser.isAdmin ? <Components.PostsStats post={post} /> : null}
@@ -62,4 +62,4 @@ class CustomPostsItem extends getRawComponent('PostsItem') {
 	}
 }
 
-replaceComponent('PostsItem', CustomPostsItem);
+// replaceComponent('PostsItem', CustomPostsItem);

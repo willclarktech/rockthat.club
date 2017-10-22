@@ -18,4 +18,4 @@ const CustomLogo = ({logoUrl, siteTitle, currentUser}) => {
 	)
 }
 
-replaceComponent('Logo', CustomLogo);
+// replaceComponent('Logo', CustomLogo);

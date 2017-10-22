@@ -28,4 +28,4 @@ class CustomNewsletter extends getRawComponent('Newsletter') {
 
 }
 
-replaceComponent('Newsletter', CustomNewsletter);
+// replaceComponent('Newsletter', CustomNewsletter);
