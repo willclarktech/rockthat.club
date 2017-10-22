@@ -1,7 +1,7 @@
 import Users from 'meteor/vulcan:users';
 
 /*
-  Let's create a new "mods" group that can edit and delete any posts
+	Let's create a new "mods" group that can edit and delete any posts
 */
 
 Users.createGroup("mods");

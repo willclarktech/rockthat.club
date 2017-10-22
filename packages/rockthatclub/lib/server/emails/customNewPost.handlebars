@@ -2,17 +2,17 @@
 <a href="{{PostsSingle.user.pageUrl}}">{{PostsSingle.user.displayName}}</a>
 has created a new AWESOME post:
 {{#if PostsSingle.url}}
-  <a href="{{PostsSingle.linkUrl}}" class="action-link">{{PostsSingle.title}}</a>
+	<a href="{{PostsSingle.linkUrl}}" class="action-link">{{PostsSingle.title}}</a>
 {{else}}
-  {{PostsSingle.title}}
+	{{PostsSingle.title}}
 {{/if}}
 </span><br><br>
 
 {{#if PostsSingle.htmlBody}}
-  <div class="post-body">
-  {{{PostsSingle.htmlBody}}}
-  </div>
-  <br>
+	<div class="post-body">
+	{{{PostsSingle.htmlBody}}}
+	</div>
+	<br>
 {{/if}}
 
 <a href="{{PostsSingle.pageUrl}}">Discuss</a><br><br>

@@ -13,18 +13,18 @@ import { FormattedMessage /*, intlShape */ } from 'meteor/vulcan:i18n';
 
 class CustomNewsletter extends getRawComponent('Newsletter') {
 
-  render() {
-    // console.log(this.renderButton); <-- exists
+	render() {
+		// console.log(this.renderButton); <-- exists
 
-    return this.state.showBanner
-      ? (
-        <div className="newsletter">
-          <h4 className="newsletter-tagline">✉️<FormattedMessage id="newsletter.subscribe_prompt"/>✉️</h4>
-          {this.props.currentUser ? this.renderButton() : this.renderForm()}
-          <a onClick={this.dismissBanner} className="newsletter-close"><Components.Icon name="close"/></a>
-        </div>
-      ) : null;
-  }
+		return this.state.showBanner
+			? (
+				<div className="newsletter">
+					<h4 className="newsletter-tagline">✉️<FormattedMessage id="newsletter.subscribe_prompt"/>✉️</h4>
+					{this.props.currentUser ? this.renderButton() : this.renderForm()}
+					<a onClick={this.dismissBanner} className="newsletter-close"><Components.Icon name="close"/></a>
+				</div>
+			) : null;
+	}
 
 }
 
