@@ -1,5 +1,5 @@
 /*
-Let's import all our files here. 
+Let's import all our files here.
 */
 
 // general business logic of this customization
@@ -18,3 +18,8 @@ import "./components/MyCustomPage.jsx";
 
 // custom routes
 import "./routes.jsx";
+
+Accounts.ui.config({
+  passwordSignupFields: 'EMAIL_ONLY',
+  // requireEmailVerification: true,
+});
