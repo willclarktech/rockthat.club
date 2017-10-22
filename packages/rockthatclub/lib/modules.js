@@ -16,6 +16,7 @@ import "./components/CustomNewsletter.jsx";
 import "./components/CustomPostsItem.jsx";
 import "./components/MyCustomPage.jsx";
 import "./components/MyPostsPage.jsx";
+import "./components/MyFooter.jsx";
 
 // custom routes
 import "./routes.jsx";
