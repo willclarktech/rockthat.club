@@ -15,7 +15,7 @@ Posts.addField([
       optional: true,
       insertableBy: ['admins'],
       editableBy: ['admins'],
-      viewableBy: ['members'],
+      viewableBy: ['guests'],
     },
   },
   {
@@ -26,7 +26,7 @@ Posts.addField([
       optional: true,
       insertableBy: ['admins'],
       editableBy: ['admins'],
-      viewableBy: ['members'],
+      viewableBy: ['guests'],
     },
   },
   {
@@ -37,7 +37,7 @@ Posts.addField([
       optional: true,
       insertableBy: ['admins'],
       editableBy: ['admins'],
-      viewableBy: ['members'],
+      viewableBy: ['guests'],
     },
   },
 ])
