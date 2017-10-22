@@ -1,9 +1,13 @@
 import { extendFragment } from 'meteor/vulcan:core';
 
 extendFragment('PostsList', `
-	color # new custom property!
+	soundcloud
+  canBring
+  minimumCharge
 `);
 
 extendFragment('PostsPage', `
-	color # new custom property!
+	soundcloud
+  canBring
+  minimumCharge
 `);
