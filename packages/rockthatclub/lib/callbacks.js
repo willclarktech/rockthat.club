@@ -11,4 +11,4 @@ function PostsNewAddRandomEmoji (post, user) {
 
 	return post;
 }
-addCallback("posts.new.sync", PostsNewAddRandomEmoji);
+// addCallback("posts.new.sync", PostsNewAddRandomEmoji);
