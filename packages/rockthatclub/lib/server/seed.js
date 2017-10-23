@@ -9,7 +9,7 @@ const seedData = [
     canBring: '80 fans',
     minimumCharge: '€240',
     soundcloud: '94792915',
-    url: 'https://dollyparton.com/',
+    artistUrl: 'https://dollyparton.com/',
   },
   {
     title: 'Flying Lotus',
@@ -17,7 +17,7 @@ const seedData = [
     canBring: '25',
     minimumCharge: '€10',
     soundcloud: '196380',
-    url: 'http://www.flying-lotus.com/',
+    artistUrl: 'http://www.flying-lotus.com/',
   },
   {
     title: 'Led Zeppelin',
@@ -25,7 +25,7 @@ const seedData = [
     canBring: '350',
     minimumCharge: '€120',
     soundcloud: '88796626',
-    url: 'http://www.ledzeppelin.com/',
+    artistUrl: 'http://www.ledzeppelin.com/',
   },
   {
     title: 'Stephen Paul Taylor',

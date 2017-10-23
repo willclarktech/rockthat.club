@@ -19,6 +19,17 @@ Posts.addField([
     },
   },
   {
+    fieldName: 'artistUrl',
+    fieldSchema: {
+      type: String,
+      control: 'text',
+      optional: true,
+      insertableBy: ['members'],
+      editableBy: ['members'],
+      viewableBy: ['guests'],
+    },
+  },
+  {
     fieldName: 'canBring',
     fieldSchema: {
       type: String,
