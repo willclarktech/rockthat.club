@@ -9,5 +9,5 @@ addStrings('en', {
 });
 
 addStrings('en', {
-  'posts.new_post': 'Add artist page'
+  'posts.new_post': 'Create an artist page'
 });
