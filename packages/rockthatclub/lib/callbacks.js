@@ -12,3 +12,12 @@ function PostsNewAddRandomEmoji (post, user) {
 	return post;
 }
 // addCallback("posts.new.sync", PostsNewAddRandomEmoji);
+
+function sortByPostedAt (parameters, terms) {
+  return {
+    selector: parameters.selector,
+    options: {...parameters.options, sort: {postedAt: -1}}
+  };
+}
+
+addCallback("movies.parameters", sortByPostedAt);
