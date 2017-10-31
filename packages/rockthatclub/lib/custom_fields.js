@@ -26,6 +26,17 @@ Posts.addField([
     },
   },
   {
+    fieldName: 'thumbnailUrl',
+    fieldSchema: {
+      type: String,
+      optional: true,
+      insertableBy: ['members'],
+      editableBy: ['members'],
+      viewableBy: ['guests'],
+      hidden: false,
+    }
+  },
+  {
     fieldName: 'canBring',
     fieldSchema: {
       type: String,
