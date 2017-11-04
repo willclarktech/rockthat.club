@@ -19,6 +19,10 @@ Package.onUse( function(api) {
 		'lib/stylesheets/custom.scss'
 	], ['client']);
 
+  api.addAssets([
+    'lib/assets/images/logo.jpg',
+  ], ['client']);
+
 	api.addAssets([
 		'lib/server/emails/customNewPost.handlebars',
 		'lib/server/emails/customEmail.handlebars'
